@@ -33,7 +33,7 @@ export const uploadFile = async (req, res) => {
     await sendEmail({
       email: req.user.email,
       subject: 'Your File is Ready to Download!',
-      message: `Your file has been successfully uploaded. You can download it using this link: ${downloadLink}\nThis link will expire in 1 hour.`,
+      message: `Your file is successfully uploaded.... You can download it using this link: ${downloadLink}\nThis link will expire in 1 hour.`,
     });
 
     res.status(201).json({ message: 'File uploaded successfully!', downloadLink });
