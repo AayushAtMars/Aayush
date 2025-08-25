@@ -6,7 +6,6 @@ const port = process.env.PORT||2000 ;
 
 
 app.use(express.json());
-app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
