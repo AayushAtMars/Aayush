@@ -5,11 +5,11 @@ const fileSchema = new mongoose.Schema({
             type: String, 
             required: true 
         },
+
         fileURL: { 
             type: String, 
             required: true 
         },
-
         uploadedBy: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
@@ -26,6 +26,7 @@ const fileSchema = new mongoose.Schema({
         },
         
 }, { timestamps: true });
+
 
 const File = mongoose.model('File', fileSchema);
 export default File;
